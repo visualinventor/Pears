@@ -14,28 +14,24 @@
 
 <h4><?php the_category(' '); ?> <span class="sep">&rarr;</span> <?php the_title(); ?></h4>
 
-<div id="pattern-wrap" class="group">
-<?php $key = "html";
-    echo get_post_meta($post -> ID, $key, true);
- ?>
-</div>
+    <div id="pattern-wrap" class="group">
+        <?php echo get_post_meta($post -> ID, 'html', true); ?>
+        </style>
+    </div>
 </div>
 
 <div class="group">
 <div id="markup" class="mod">
 <h3 class="label">HTML</h3> <a href="#" class="clip" title="select code for copying"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-copy.png" alt="copy" /></a>
 <textarea class="mod-ta">
-<?php $key = "html";
-    echo esc_textarea(get_post_meta($post -> ID, $key, true));
- ?>
+<?php echo esc_textarea(get_post_meta($post -> ID, 'html', true));?>
 </textarea>
 </div>
 
 <div id="style" class="mod">
 <h3 class="label">CSS</h3> <a href="#" class="clip" title="select code for copying"><img src="<?php echo get_template_directory_uri(); ?>/images/icon-copy.png" alt="copy" /></a>
 <textarea id="css-code" class="mod-ta">
-<?php $key = "css";
-    echo get_post_meta($post -> ID, $key, true);
+<?php echo get_post_meta($post -> ID, 'css', true);
  ?>
 </textarea>
 </div>
