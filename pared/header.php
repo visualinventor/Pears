@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Pairs <?php wp_title('/', true, 'left'); ?></title>
-
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<!DOCTYPE html><html><head><title>Pairs <?php wp_title('/', true, 'left'); ?></title>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 <!-- hide css from IE6 but load for everyone else -->
 <!--[if gte IE 7]><!-->
@@ -13,11 +8,13 @@
 
 <link rel="shortcut icon" href="/favicon.png" />
 
+<?php wp_enqueue_script('lessjs', get_template_directory_uri() . '/js/less.js'); ?>
+
 <!-- enable HTML5 elements in IE7+8 -->
 <!--[if lt IE 9]>
-<?php wp_enqueue_script( 'html5shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js' ); ?>
+<?php wp_enqueue_script('html5shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js' ); ?>
 <![endif]-->
-<?php wp_enqueue_script( 'lessjs', get_template_directory_uri(). '/js/less.js' ); ?>
+
 
 <?php wp_head(); ?>
 </head>

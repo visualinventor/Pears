@@ -10,6 +10,9 @@
 <!-- jQuery -->
 <?php wp_enqueue_script('jquery'); ?>
 
+<!-- plugin to scope the pattern styles -->
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.scoped.js"></script>
+
 <script>
 	$(document).ready(function() {
 		$.scoped();
